@@ -19,6 +19,6 @@ canvas {
 
 /* Adicionando estilo para as linhas da grade */
 .grid-line {
-  stroke: #ccc;
+  stroke: #fff;
   stroke-width: 1;
 }
