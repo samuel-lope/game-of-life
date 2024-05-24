@@ -1,3 +1,6 @@
+// Author: Samuel Lopes
+// Date: 2024-05-24
+
 const cellSize = 10;
 let cols, rows;
 let grid, nextGrid;
