@@ -96,8 +96,8 @@ function randomizeGrid() {
 function initializeWithPattern(pattern) {
   let startX = Math.floor((cols - pattern.length) / 2);
   let startY = Math.floor((rows - pattern[0].length) / 2);
-  for (let i = 0; i < pattern.length; i++) {
-    for (let j = 0; j < pattern[i].length; j++) {
+  for (let i = 0; i < cols; i++) {
+    for (let j = 0; j < rows; j++) {
       grid[startX + i][startY + j] = pattern[i][j];
     }
   }
