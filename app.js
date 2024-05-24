@@ -78,7 +78,7 @@ function setup() {
 function make2DArray(cols, rows) {
   let arr = new Array(cols);
   for (let i = 0; i < arr.length; i++) {
-    arr[i] = new Array(rows);
+    arr[i] = new Array(rows).fill(0);
   }
   return arr;
 }
@@ -96,8 +96,8 @@ function randomizeGrid() {
 function initializeWithPattern(pattern) {
   let startX = Math.floor((cols - pattern.length) / 2);
   let startY = Math.floor((rows - pattern[0].length) / 2);
-  for (let i = 0; i < cols; i++) {
-    for (let j = 0; j < rows; j++) {
+  for (let i = 0; i < pattern.length; i++) {
+    for (let j = 0; j < pattern[i].length; j++) {
       grid[startX + i][startY + j] = pattern[i][j];
     }
   }
