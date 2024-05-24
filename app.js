@@ -18,10 +18,10 @@ function setup() {
   nextGrid = make2DArray(cols, rows);
   
   // Inicializando a grade com valores aleatórios
-  //randomizeGrid();
+  randomizeGrid();
   
   // Inicializando a grade com um padrão específico (descomente a linha abaixo para testar)
-  initializeWithPattern(pattern);
+  //initializeWithPattern(pattern);
   
   // Função de desenho chamada repetidamente
   function draw() {
