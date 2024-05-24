@@ -91,3 +91,4 @@ function countNeighbors(grid, x, y) {
 }
 
 window.onload = setup;
+
