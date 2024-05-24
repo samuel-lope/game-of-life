@@ -36,6 +36,10 @@ function setup() {
           context.fillStyle = '#fff';
         }
         context.fillRect(i * cellSize, j * cellSize, cellSize, cellSize);
+        
+        // Desenhando as linhas da grade
+        context.strokeStyle = '#ccc';
+        context.lineWidth = 1;
         context.strokeRect(i * cellSize, j * cellSize, cellSize, cellSize);
       }
     }
@@ -94,4 +98,3 @@ function countNeighbors(grid, x, y) {
 }
 
 window.onload = setup;
-

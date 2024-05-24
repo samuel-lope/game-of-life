@@ -14,5 +14,11 @@ h1 {
 }
 
 canvas {
-  border: 1px solid hsl(0, 0%, 94%);
+  border: 1px solid #000;
+}
+
+/* Adicionando estilo para as linhas da grade */
+.grid-line {
+  stroke: #ccc;
+  stroke-width: 1;
 }
