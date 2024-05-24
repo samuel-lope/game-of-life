@@ -1,5 +1,6 @@
 // Author: Samuel Lopes
 // Date: 2024-05-24
+// Versão: 1.0.1
 
 const cellSize = 10;
 let cols, rows;
@@ -17,11 +18,10 @@ function setup() {
   nextGrid = make2DArray(cols, rows);
   
   // Inicializando a grade com valores aleatórios
-  for (let i = 0; i < cols; i++) {
-    for (let j = 0; j < rows; j++) {
-      grid[i][j] = Math.floor(Math.random() * 2);
-    }
-  }
+  //randomizeGrid();
+  
+  // Inicializando a grade com um padrão específico (descomente a linha abaixo para testar)
+  initializeWithPattern(pattern);
   
   // Função de desenho chamada repetidamente
   function draw() {
@@ -38,7 +38,7 @@ function setup() {
         context.fillRect(i * cellSize, j * cellSize, cellSize, cellSize);
         
         // Desenhando as linhas da grade
-        context.strokeStyle = '#fff';
+        context.strokeStyle = '#ccc';
         context.lineWidth = 1;
         context.strokeRect(i * cellSize, j * cellSize, cellSize, cellSize);
       }
@@ -83,6 +83,24 @@ function make2DArray(cols, rows) {
   return arr;
 }
 
+// Função para inicializar a grade com valores aleatórios
+function randomizeGrid() {
+  for (let i = 0; i < cols; i++) {
+    for (let j = 0; j < rows; j++) {
+      grid[i][j] = Math.floor(Math.random() * 2);
+    }
+  }
+}
+
+// Função para inicializar a grade com um padrão específico
+function initializeWithPattern(pattern) {
+  for (let i = 0; i < pattern.length; i++) {
+    for (let j = 0; j < pattern[i].length; j++) {
+      grid[i][j] = pattern[i][j];
+    }
+  }
+}
+
 // Função para contar os vizinhos vivos
 function countNeighbors(grid, x, y) {
   let sum = 0;
@@ -96,5 +114,12 @@ function countNeighbors(grid, x, y) {
   sum -= grid[x][y];
   return sum;
 }
+
+// Exemplo de um padrão inicial
+const pattern = [
+  [0, 1, 0],
+  [0, 0, 1],
+  [1, 1, 1]
+];
 
 window.onload = setup;
