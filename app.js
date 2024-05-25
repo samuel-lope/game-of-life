@@ -18,10 +18,10 @@ function setup() {
   nextGrid = make2DArray(cols, rows);
   
   // Inicializando a grade com valores aleatórios
-  // randomizeGrid();
+  randomizeGrid();
   
   // Inicializando a grade com um padrão específico
-  initializeWithPattern(pattern);
+  //initializeWithPattern(pattern);
   
   // Função de desenho chamada repetidamente
   function draw() {
@@ -139,7 +139,7 @@ const pattern = [
   // Espaço vazio após o padrão
   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 ];
 
 
